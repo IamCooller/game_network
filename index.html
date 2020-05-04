@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/magic.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Игра сетевик</title>
 </head>
@@ -62,14 +63,15 @@
                 <!-- /.rules -->
            
            
-            <div class="btn_yes">
-                <a href="#"><img src="img/Действие - Да.png" alt=""></a>
+            <div class="btn_yes btn_right">
+                <a href="#"></a>
+                <img src="img/Действие - Да.png" alt="">
             </div>
         </section>
 
         <section>
             <div class="btn_yes option_btn_left">
-                <a href="#"><img src="img/Нет.png" alt=""></a>
+                <a href="#"></a><img src="img/Нет.png" alt="">
             </div>
             <div class="event_card">
                 <div class="income row">
@@ -105,13 +107,14 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn">
-                <a href="#"><img src="img/Действие - Да.png" alt=""></a>
+            <div class="btn_yes option_btn" >
+                <a class="btn_right" onmouseover="changeItem()" onmouseout="rechangeItem()" ></a>
+                    <img src="img/Действие - Да.png" alt="">
             </div>
            
         </section>
 
-        <section>
+        <section id="superellips">
             <div class="event_card">
                 <div class="income row">
                     <div class="income_left col-md-6">
@@ -146,9 +149,12 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn">
-                <a href="#"><img src="img/Действие - Да-стрелка.png" alt=""></a>
-            </div>
+           
+                <div class="btn_yes option_btn">
+                    <a href=""></a><img src="img/Действие - Да-стрелка.png" alt="">
+                </div>
+        
+            
         </section>
 
         <section>
@@ -182,7 +188,7 @@
                     </div>
                 </div>
                 <div class="btn_yes option_btn">
-                    <a href="#"><img src="img/Действие - Да-стрелка.png" alt=""></a>
+                    <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
                 </div>
             </div>
 
@@ -253,5 +259,25 @@
         </section>
 
     </main>
+
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.slim.js"
+  integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE="
+  crossorigin="anonymous"></script>
+
+  <script>
+  
+  function changeItem() {
+    $('section').toggleClass('active_right');
+}
+function rechangeItem() {
+    $('section').toggleClass('active_right1');
+}
+
+
+
+
+
+  </script>
 </body>
 </html>
