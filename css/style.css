@@ -1,0 +1,250 @@
+@import url('normilaze.css');
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.22);
+    border-radius: 18px;
+    max-width: 350px;
+    margin: 80px 15px;
+    padding: 20px 30px;
+    min-height: 550px;
+    position: relative;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.info_game p{
+    margin-top: 10%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn_game a{
+    cursor: pointer;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.browse_text{
+    color:#32BF2F;
+    margin-top: 35px;
+}
+
+
+
+.say{
+    font-weight: bold;
+}
+
+.yes{
+    font-weight: bold;
+    color:#32BF2F;
+}
+
+.no{
+    font-weight: bold;
+    color: #BF2F2F;
+}
+
+.tape_yes{
+    color:#32BF2F;
+}
+
+.rulesPlay{
+    max-width: 350px;
+}
+
+.btn_yes{
+    position: relative; 
+    max-width: 68px;
+    z-index: -1;
+}
+
+.btn_yes img{
+   position: absolute;
+   
+}
+
+.option_btn{
+    left: -6%;
+    cursor: pointer;
+}
+
+.option_btn_left{
+    right: 17%;
+}
+
+.btn_yes:hover{
+    cursor: pointer;
+}
+
+
+.income_text{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+    margin: 5px 0;
+}
+
+.income{
+    border-bottom: 1px solid #BCBCBC;
+}
+
+.income_done{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #35D13B;
+}
+
+.income_false{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #BF2F2F;;
+}
+
+.invite{
+    padding-left: 50px;
+}
+
+h4{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.invite_text{
+    font-family: 'Roboto',sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #BF2F2F;
+}
+
+.green{
+    color: #2FBF4F;
+}
+
+.cvartal_report{
+    border-top: 1px solid #BCBCBC;
+}
+
+.now_moments{
+    border-top: 1px solid #BCBCBC;;
+}
+
+.now_moments .income{
+    border: none;
+}
+
+.idea{
+    border-top: 1px solid #BCBCBC;
+    padding-top: 30px;
+}
+
+.result span{
+    font-weight: bold;
+}
+
+.swirl{
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 400px;
+    text-align: left;
+}
+
+.swirl h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.swirl h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.done{
+    padding:0;
+}
+
+.done h2{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #979797;
+}
+
+.done p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #35D13B;
+}
+
+.user{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+
+.user_Lesa{
+    margin-left: 20px;
+}
+
+.user_Lesa h5{
+    margin:0;
+}
+
+.swirl img{
+    margin: 30px 0;
+}
+
+.photo_user img{
+    margin: 0;
+}
