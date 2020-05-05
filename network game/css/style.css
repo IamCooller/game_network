@@ -1,0 +1,340 @@
+@import url('normilaze.css');
+
+main{
+    position: relative;
+    z-index: 200;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.22);
+    border-radius: 18px;
+    max-width: 350px;
+    margin: 80px 15px;
+    padding: 20px 30px;
+    min-height: 550px;
+   
+    transition-duration: .3s;
+}
+
+
+
+p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.info_game p{
+    margin-top: 10%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn_game a{
+    cursor: pointer;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.browse_text{
+    color:#32BF2F;
+    margin-top: 35px;
+}
+
+
+
+.say{
+    font-weight: bold;
+}
+
+.yes{
+    font-weight: bold;
+    color:#32BF2F;
+}
+
+.no{
+    font-weight: bold;
+    color: #BF2F2F;
+}
+
+.tape_yes{
+    color:#32BF2F;
+}
+
+.rulesPlay{
+    max-width: 350px;
+}
+
+.btn_yes{
+    position: relative; 
+    max-width: 68px;
+    cursor: pointer;
+    z-index: auto;
+}
+
+.btn_yes a{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 68px;
+    height: 68px;
+   
+}
+
+.btn_yes img{
+   position: absolute;
+   z-index: -11;
+    top:-100px;
+}
+
+
+
+.option_btn{
+    left: -6%;
+    cursor: pointer;
+}
+
+.option_btn_left{
+    right: 17%;
+    cursor: pointer;
+}
+
+.option_btn_left a{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 68px;
+    height: 68px;
+   
+}
+
+.option_btn_left:hover{
+    cursor: pointer;
+}
+.btn_yes:hover{
+    cursor: pointer;
+}
+
+
+.income_text{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+    margin: 5px 0;
+}
+
+.income{
+    border-bottom: 1px solid #BCBCBC;
+}
+
+.income_done{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #35D13B;
+}
+
+.income_false{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    color: #BF2F2F;;
+}
+
+.invite{
+    padding-left: 50px;
+}
+
+h4{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.invite_text{
+    font-family: 'Roboto',sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #BF2F2F;
+}
+
+.green{
+    color: #2FBF4F;
+}
+
+.cvartal_report{
+    border-top: 1px solid #BCBCBC;
+}
+
+.now_moments{
+    border-top: 1px solid #BCBCBC;;
+}
+
+.now_moments .income{
+    border: none;
+}
+
+.idea{
+    border-top: 1px solid #BCBCBC;
+    padding-top: 30px;
+}
+
+.result span{
+    font-weight: bold;
+}
+
+.swirl{
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 400px;
+    text-align: left;
+}
+
+.swirl h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.swirl h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.done{
+    padding:0;
+}
+
+.done h2{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #979797;
+}
+
+.done p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #35D13B;
+}
+
+.user{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+
+.user_Lesa{
+    margin-left: 20px;
+}
+
+.user_Lesa h5{
+    margin:0;
+}
+
+.swirl img{
+    margin: 30px 0;
+}
+
+.photo_user img{
+    margin: 0;
+}
+
+
+
+
+
+.animation-target {
+    -webkit-animation: animation 1000ms linear both;
+    animation: animation 1000ms linear both;
+  }
+  
+  /* Generated with Bounce.js. Edit at https://bouncejs.com#%7Bs%3A%5B%7BT%3A%22r%22%2Ce%3A%22b%22%2Cd%3A1000%2CD%3A0%2Cf%3A0%2Ct%3A-10%2Cs%3A3%2Cb%3A4%7D%5D%7D */
+  
+  @-webkit-keyframes animation { 
+    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.3% { -webkit-transform: matrix3d(0.996, -0.09, 0, 0, 0.09, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.996, -0.09, 0, 0, 0.09, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    8.61% { -webkit-transform: matrix3d(0.988, -0.153, 0, 0, 0.153, 0.988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.988, -0.153, 0, 0, 0.153, 0.988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    12.91% { -webkit-transform: matrix3d(0.983, -0.183, 0, 0, 0.183, 0.983, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.983, -0.183, 0, 0, 0.183, 0.983, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.22% { -webkit-transform: matrix3d(0.982, -0.19, 0, 0, 0.19, 0.982, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.982, -0.19, 0, 0, 0.19, 0.982, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { -webkit-transform: matrix3d(0.984, -0.177, 0, 0, 0.177, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.984, -0.177, 0, 0, 0.177, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    39.44% { -webkit-transform: matrix3d(0.985, -0.173, 0, 0, 0.173, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.173, 0, 0, 0.173, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    61.66% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.98% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+  @keyframes animation { 
+    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.3% { -webkit-transform: matrix3d(0.996, -0.09, 0, 0, 0.09, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.996, -0.09, 0, 0, 0.09, 0.996, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    8.61% { -webkit-transform: matrix3d(0.988, -0.153, 0, 0, 0.153, 0.988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.988, -0.153, 0, 0, 0.153, 0.988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    12.91% { -webkit-transform: matrix3d(0.983, -0.183, 0, 0, 0.183, 0.983, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.983, -0.183, 0, 0, 0.183, 0.983, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.22% { -webkit-transform: matrix3d(0.982, -0.19, 0, 0, 0.19, 0.982, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.982, -0.19, 0, 0, 0.19, 0.982, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { -webkit-transform: matrix3d(0.984, -0.177, 0, 0, 0.177, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.984, -0.177, 0, 0, 0.177, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    39.44% { -webkit-transform: matrix3d(0.985, -0.173, 0, 0, 0.173, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.173, 0, 0, 0.173, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    61.66% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.98% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { -webkit-transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, -0.174, 0, 0, 0.174, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+  
+  
+
+@media (max-width: 770px){
+    .income_right{
+       max-width: 160px;
+    }
+    .income_left{
+       max-width: 150px;
+    }
+
+    .action_left{
+        max-width: 150px;
+    }
+    .action_right{
+        max-width: 150px;
+    }
+}
