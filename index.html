@@ -11,6 +11,7 @@
 </head>
 <body>
     <main>
+        
         <section>
             <div class="game_network">
                 <div class="img_row row">
@@ -61,16 +62,15 @@
                     </div>
                 </div>
                 <!-- /.rules -->
-           
-           
-            <div class="btn_yes btn_right">
-                <a href="#"></a>
-                <img src="img/Действие - Да.png" alt="">
-            </div>
+                <div class="btn_yes btn_right" onclick="changeItem()" >
+                    <a href="#" style="z-index: -1;" ></a>
+                    <img src="img/Действие - Да.png" alt="" style="z-index: -1;">
+                </div>
         </section>
-
+        
+        
         <section>
-            <div class="btn_yes option_btn_left">
+            <div class="btn_yes option_btn_left " onclick="changeItem()">
                 <a href="#"></a><img src="img/Нет.png" alt="">
             </div>
             <div class="event_card">
@@ -107,8 +107,8 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn" >
-                <a class="btn_right" onmouseover="changeItem()" onmouseout="rechangeItem()" ></a>
+            <div class="btn_yes option_btn" onclick="changeItem()" >
+                <a class="btn_right" ></a>
                     <img src="img/Действие - Да.png" alt="">
             </div>
            
@@ -157,7 +157,7 @@
             
         </section>
 
-        <section>
+        <section class="cvartal">
             <div class="report">
                 <div class="cvartal_report_row row">
                     <div class="cvartal_report col-md-12">
@@ -187,15 +187,18 @@
                             </div>
                     </div>
                 </div>
-                <div class="btn_yes option_btn">
-                    <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
-                </div>
+                
+               
             </div>
 
             <div class="idea_row row">
                 <div class="idea col-md-12">
                     <h5>Вы близки к цели!</h5>
                 </div>
+            </div>
+            </div>
+             <div class="btn_yes">
+                <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
             </div>
         </section>
 
@@ -268,10 +271,7 @@
   <script>
   
   function changeItem() {
-    $('section').toggleClass('active_right');
-}
-function rechangeItem() {
-    $('section').toggleClass('active_right1');
+    $('section').toggleClass('animation-target');
 }
 
 
