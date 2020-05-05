@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <!-- /.rules -->
-                <div class="btn_yes btn_right" onclick="changeItem()" >
+                <div class="btn_yes btn_right" onclick="changeItem_Left()" >
                     <a href="#" style="z-index: -1;" ></a>
                     <img src="img/Действие - Да.png" alt="" style="z-index: -1;">
                 </div>
@@ -70,7 +70,7 @@
         
         
         <section>
-            <div class="btn_yes option_btn_left " onclick="changeItem()">
+            <div class="btn_yes option_btn_left " onclick="changeItem_Right()">
                 <a href="#"></a><img src="img/Нет.png" alt="">
             </div>
             <div class="event_card">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn" onclick="changeItem()" >
+            <div class="btn_yes option_btn" onclick="changeItem_Left()" >
                 <a class="btn_right" ></a>
                     <img src="img/Действие - Да.png" alt="">
             </div>
@@ -270,8 +270,18 @@
 
   <script>
   
-  function changeItem() {
-    $('section').toggleClass('animation-target');
+  function changeItem_Left() {
+    $('section').toggleClass('magictime rotateLeft'); 
+    setTimeout(function(){
+    $('section').removeClass('magictime rotateLeft');
+}, 2000);
+}
+
+function changeItem_Right() {
+    $('section').toggleClass('magictime rotateRight'); 
+    setTimeout(function(){
+    $('section').removeClass('magictime rotateRight');
+}, 2000);
 }
 
 

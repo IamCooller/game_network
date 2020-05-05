@@ -3,6 +3,7 @@
 main{
     position: relative;
     z-index: 200;
+   
 }
 
 section{
@@ -336,5 +337,13 @@ h4{
     }
     .action_right{
         max-width: 150px;
+    }
+}
+
+
+@media (max-width: 400px){
+    main{
+        margin-left: 20px;
+        width: 400px;
     }
 }
