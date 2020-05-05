@@ -338,12 +338,21 @@ h4{
     .action_right{
         max-width: 150px;
     }
+
+    .income_text{
+        font-size: 10px;
+    }
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 440px){
     main{
         margin-left: 20px;
         width: 400px;
+    }
+    .swirl h1 {
+       
+        font-size: 20px;
+        
     }
 }
