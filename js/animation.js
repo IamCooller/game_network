@@ -1,42 +1,42 @@
 
   
 function changeItem_Left() {
-  $('section').toggleClass('popOutLeft'); 
+  $('section').addClass('popOutLeft duration-450'); 
   setTimeout(function(){
   $('section').removeClass('popOutLeft');
-}, 1000);
+}, 500);
 }
 
 function changeItem_Right() {
-  $('section').toggleClass('popOutRight'); 
+  $('section').addClass('popOutRight duration-450'); 
   setTimeout(function(){
   $('section').removeClass('popOutRight');
-}, 1000);
+}, 500);
 }
 
 
 function changeItem_Star() {
-  $('.Start_Game').toggleClass('popOutLeft duration-450');   
+  $('.Start_Game').toggleClass('popOutLeft duration-250');   
   setTimeout(function(){ 
     $('.Start_Game').css('display', 'none');      
-}, 445);
+}, 249);
 setTimeout(function(){
 $('.Start_Game-Two').css('display', '');
-$('.Start_Game-Two').toggleClass('popInRight duration-850'); 
-}, 700);
+$('.Start_Game-Two').toggleClass('popInRight duration-450'); 
+}, 300);
 }
 
 
 
 function changeItem_Left_CardsTwo() {
-  $('.Start_Game-Two').toggleClass('popOutRight duration-450'); 
+  $('.Start_Game-Two').toggleClass('popOutRight duration-250'); 
   setTimeout(function(){
     $('.Start_Game-Two').css('display', 'none'); 
-}, 450); 
+}, 250); 
 
 setTimeout(function(){
   $('.cards_one').css('display', '');
-  $('.cards_one').toggleClass('popInLeft duration-850'); 
-  }, 700);
+  $('.cards_one').toggleClass('popInLeft duration-450'); 
+  }, 300);
 }
 
