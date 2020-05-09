@@ -1,3 +1,6 @@
+Vue.use(VueTouch, {name: 'v-touch'})
+
+
 new Vue({
     el: '#app',
     data: {
@@ -44,7 +47,8 @@ new Vue({
             this.balance -= 10000;
             this.LastAction -= 10000;
         }
-        }
+        },
+       
     
     },
   });

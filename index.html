@@ -10,8 +10,10 @@
     <title>Игра сетевик</title>
 </head>
 <body>
+
+   
     <main id="app">
-        
+      
         <section class="Start_Game">
             <div class="game_network">
                 <div class="img_row row">
@@ -62,16 +64,23 @@
                     </div>
                 </div>
                 <!-- /.rules -->
-                <div class="btn_yes btn_right" onclick="changeItem_Left_CardsTwo()" >
-                    <a href="#" style="z-index: -1;" ></a>
+                <div class="btn_yes btn_right CardsTwo" onclick="changeItem_Left_CardsTwo()">
+                    
+                    <a href="#" ></a>
                     <img src="img/Действие - Да.png" alt="" style="z-index: -1;">
+                         
                 </div>
         </section>
         
+            
+       
         
         <section class='cards_one' style="display: none;">
-            <div class="btn_yes option_btn_left " onclick="changeItem_Right()" v-if="!cards[0].ButtonsLeft" @click ="round()">
-                <a href="#"></a><img src="img/Нет.png" alt="">
+            <div onclick="changeItem_Right()" class="btn_yes option_btn_left btn_left"  v-if="!cards[0].ButtonsLeft" @click ="round()">
+            <v-touch @swiperight="round">
+                <a href="#" class="btn_left" style="left:20%;"></a>
+                <img src="img/Нет.png" alt="" class="btn_left">
+            </v-touch>
             </div>
 
 
@@ -118,9 +127,12 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn" onclick="changeItem_Left()" @click ="round()" >
-                <a class="btn_right" ></a>
+            <div class="btn_yes option_btn" onclick="changeItem_Left()" @click ="round()">
+                <v-touch @swipeleft="round">
+                    <a class="btn_right" ></a>
                     <img src="img/Действие - Да.png" alt="">
+                </v-touch>
+                
             </div>
         </section>
 
@@ -296,8 +308,14 @@
   src="https://code.jquery.com/jquery-3.5.0.slim.js"
   integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE="
   crossorigin="anonymous"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="node_modules/vue-touch/dist/vue-touch.min.js"></script>
+    <script src="node_modules/vue2-touch-events/index.js"></script>
+ 
     <script src="js/animation.js"></script>
     <script src="js/app.js"></script>
+  
 </body>
 </html>
