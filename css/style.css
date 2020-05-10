@@ -3,6 +3,7 @@
 main{
     position: relative;
     z-index: 200;
+    padding-top: 50px;
 }
 
 section{
@@ -16,7 +17,8 @@ section{
     margin: 35px 15px;
     padding: 20px 30px;
     min-height: 620px;
-    
+    position: fixed;
+    top: -40px;
 }
 
 .Start_Game{
@@ -102,7 +104,7 @@ h2{
     width: 50%;
     cursor: pointer;
     z-index: auto;
-    top: 85%;
+    top: 89%;
     right: 195px;
 }
 .btn_yes{
@@ -110,7 +112,7 @@ h2{
     width: 50%;
     cursor: pointer;
     z-index: auto;
-    top: 85%;
+    top: 89%;
     right: 5px;
 }
 
@@ -123,7 +125,7 @@ h2{
     width: 50%;
     cursor: pointer;
     z-index: auto;
-    top: 85%;
+    top: 89%;
     right: 180px;
 }
 
@@ -237,6 +239,10 @@ h4{
     color: #000000;
 }
 
+.rules{
+    padding-top: 50px;
+}
+
 .done{
     padding:0;
 }
@@ -310,8 +316,8 @@ h4{
 
 @media (max-width: 440px){
     main{
-        margin-left: 20px;
-        width: 400px;
+        margin-left: -20px;
+        
     }
     .swirl h1 {
        
@@ -322,7 +328,36 @@ h4{
 
 }
 
+@media (max-height:600px){
+    section{
+        min-height: 0;
+    }
+    .browse_tape {
+        margin-bottom: 10%;
+    }
 
+    .btn_yes{
+        margin-top: 10%;
+    }
+    .btn_no{
+        margin-top: 10%;
+    }
+
+    .btn_game{
+        margin-bottom: 20%;
+    }
+
+    .CardsTwo{
+        margin-top: 10%;
+    }
+    .invite{
+        top:-15%;
+    }
+
+    .Cards_next{
+        margin-top: 0;
+    }
+}
 
 .none{
     display: none;
