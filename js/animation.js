@@ -12,24 +12,22 @@
       
         $('section').toggleClass('popOutLeft duration-450'); 
         setTimeout(function(){
-        $('section').removeClass('popOutLeft');
+        $('section').removeClass('popOutLeft duration-450');
       }, 500);
-    
-      console.log(count++);
     },
     
     //Default is 75px, set to 0 for demo so any distance triggers swipe
     threshold:0
   });
 
-  $(".btn_left").swipe( {
+  $("#btn_left").swipe( {
     //Single swipe handler for left swipes
     swipeRight:function(event, direction, distance, duration, fingerCount) {
-      $('section').toggleClass('popOutRight duration-450'); 
+      $('section').addClass('popOutRight duration-450'); 
   setTimeout(function(){
   $('section').removeClass('popOutRight');
 }, 500);
-console.log(counter++);
+
     },
     
     //Default is 75px, set to 0 for demo so any distance triggers swipe

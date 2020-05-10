@@ -9,16 +9,18 @@ new Vue({
         peoples:0,
         balance: 20000,
         LastAction:0,
+        ButtonsLeft: false,
+        none: false,
         cards:[
             {
             "id": 1,
             "condition": "Ваш друг предложил вам сходить на презентацию компании, пойдете?",
-            "ButtonsLeft": true
+            "ButtonsLeft": false
             },
             {
             "id": 2,
             "condition": "Сетевой бизнес - это когда ты строишь маленькую экономику на рельном товаре. Вы готовы стартануть прямо сейчас? ",
-            "ButtonsLeft": true,
+            "ButtonsLeft": false,
             "false": "Это действие стоит - 10000"
             },
             {
@@ -46,7 +48,13 @@ new Vue({
             if(this.cards[0].id == 3){
             this.balance -= 10000;
             this.LastAction -= 10000;
-        }
+            }
+            if ((this.cards[0].id == 1 )||(this.cards[0].id == 2)){
+                this.none = true;
+                this.ButtonsLeft= false;
+            }else{
+                this.ButtonsLeft= true;
+            }
         },
        
     

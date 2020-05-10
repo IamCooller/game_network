@@ -319,3 +319,7 @@ h4{
         font-size: 20px;
     }
 }
+
+.none{
+    display: none;
+}

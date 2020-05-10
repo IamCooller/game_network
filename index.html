@@ -76,9 +76,11 @@
        
         
         <section class='cards_one' style="display: none;">
-            <div onclick="changeItem_Right()" class="btn_yes option_btn_left btn_left"  v-if="!cards[0].ButtonsLeft" @click ="round()">
+
+
+            <div onclick="changeItem_Right()" class="btn_yes option_btn_left " v-show="ButtonsLeft" @click ="round()">
             <v-touch @swiperight="round">
-                <a href="#" class="btn_left" style="left:20%;"></a>
+                <a href="#" id="btn_left" style="left:20%;"></a>
                 <img src="img/Нет.png" alt="" class="btn_left">
             </v-touch>
             </div>
@@ -311,8 +313,8 @@
   <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/hammer.min.js"></script>
-    <script src="node_modules/vue-touch/dist/vue-touch.min.js"></script>
-    <script src="node_modules/vue2-touch-events/index.js"></script>
+    <script src="js/vue-touch.js"></script>
+    <script src="js/index.js"></script>
  
     <script src="js/animation.js"></script>
     <script src="js/app.js"></script>
