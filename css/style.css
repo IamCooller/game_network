@@ -92,9 +92,9 @@ h2{
     position: absolute;
     z-index: 1;
     display: block;
-    width: 68px;
-    height: 68px;
-    top:-100px;
+    width: 1000px;
+    height: 1000px;
+    top:-500px;
 }
 
 .btn_yes img{
@@ -121,8 +121,8 @@ h2{
     position: absolute;
     z-index: 1;
     display: block;
-    width: 68px;
-    height: 68px;
+    width: 1000px;
+    height: 1000px;
    
 }
 
