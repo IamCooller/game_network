@@ -10,7 +10,9 @@ new Vue({
         balance: 20000,
         LastAction:0,
         ButtonsLeft: false,
+        ButtonsRight: false,
         none: false,
+        Next: true,
         cards:[
             {
             "id": 1,
@@ -52,8 +54,12 @@ new Vue({
             if ((this.cards[0].id == 1 )||(this.cards[0].id == 2)){
                 this.none = true;
                 this.ButtonsLeft= false;
+                this.ButtonsRight= false;
+                this.Next= true;
             }else{
                 this.ButtonsLeft= true;
+                this.ButtonsRight= true;
+                this.Next= false;
             }
         },
        

@@ -47,7 +47,7 @@
                     </div>
                     <div class="rulesPlay_row row">
                         <div class="rulesPlay col-md-12">
-                            <p>В игре вы будете оценивать ситуацию и принимать решение. 
+                            <p>В игре вы будете <br> оценивать ситуацию и <br> принимать решение. <br>
                                 <span class="say">Нужно отвечать:</span> <span class="yes">Да</span> / <span class='no'>Нет</span></p>
                         </div>
                     </div>
@@ -59,15 +59,16 @@
                     </div>
                     <div class="browse_tape_row row">
                         <div class="browse_tape col-md-12">
-                            <p>Проведите пальцем влево или нажмите на зеленую кнопку, чтобы ответить <span class="tape_yes">ДА</span></p>
+                            <p>Проведите пальцем вправо или нажмите на зеленую кнопку, чтобы ответить <span class="tape_yes">ДА</span></p>
                         </div>
                     </div>
+                    
                 </div>
                 <!-- /.rules -->
-                <div class="btn_yes CardsTwo" onclick="changeItem_Left_CardsTwo()">
+                <div class="btn_next CardsTwo col-md-12" onclick="changeItem_Left_CardsTwo()">
                     
-                    <a href="#" class="btn_right"></a>
-                    <img src="img/Действие - Да.png" alt="" style="z-index: -1;">
+                    <a href="#" class="btn_next"></a>
+                    <img src="img/Продолжить.png" alt="" style="z-index: -1;">
                          
                 </div>
         </section>
@@ -78,13 +79,7 @@
         <section class='cards_one' style="display: none;">
 
 
-            <div onclick="changeItem_Right()" class="btn_yes option_btn_left " v-show="ButtonsLeft" @click ="round()">
-            <v-touch @swiperight="round">
-                <a href="#" id="btn_left"></a>
-                <img src="img/Нет.png" alt="" class="btn_left">
-            </v-touch>
-            </div>
-
+        
 
 
             <div class="event_card">
@@ -129,13 +124,29 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_yes option_btn" onclick="changeItem_Left()" @click ="round()">
-                <v-touch @swipeleft="round">
-                    <a class="btn_right" ></a>
-                    <img src="img/Действие - Да.png" alt="">
-                </v-touch>
-                
+           
+
+            <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()" @click ="round()" v-show="Next">
+                <v-touch @swiperight="round">
+                <a href="#" class="btn_next"></a>
+                <img src="img/Продолжить.png" alt="" style="z-index: -1;">
+            </v-touch>
             </div>
+
+            <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft" @click ="round()">
+                <v-touch @swipeleft="round">
+                    <a href="#" id="btn_no"></a>
+                    <img src="img/Нет.png" alt="" class="btn_left">
+                </v-touch>
+                </div>
+
+                <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight" @click ="round()">
+                    <v-touch @swiperight="round">
+                        <a href="#" id="btn_left"></a>
+                        <img src="img/Да.png" alt="" class="btn_right">
+                    </v-touch>
+                    </div>
+        
         </section>
 
 
