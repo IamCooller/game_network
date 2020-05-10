@@ -358,7 +358,11 @@ h4{
         margin-top: 0;
     }
 }
-
+@media (min-height:700px){
+    section{
+        margin-top: 30%;
+    }
+}
 .none{
     display: none;
 }
