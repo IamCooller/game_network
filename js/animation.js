@@ -1,8 +1,7 @@
 
 
 
- $(function() {      
-  
+ $(function() {        
   $(".btn_no").swipe( {
     swipeLeft:function(event, direction, distance, duration, fingerCount) {
         $('section').addClass('popOutLeft duration-450'); 
@@ -10,19 +9,17 @@
         $('section').removeClass('popOutLeft duration-450');
       }, 500);
     },
-    threshold:0
+    threshold:75
   });
-
   $(".btn_next").swipe( {
   swipeRight:function(event, direction, distance, duration, fingerCount) {
-      $('section').addClass('popOutRight duration-450'); 
+  $('section').addClass('popOutRight duration-450'); 
   setTimeout(function(){
   $('section').removeClass('popOutRight');
 }, 500);
     },
-    threshold:0
+    threshold:75
   });
-
   $(".btn_yes").swipe( {
     swipeRight:function(event, direction, distance, duration, fingerCount) {
         $('section').addClass('popOutRight duration-450'); 
@@ -30,9 +27,8 @@
     $('section').removeClass('popOutRight');
   }, 500);
       },
-      threshold:0
+      threshold:75
     });
-
 });
  
 
@@ -49,28 +45,23 @@ $(function() {
     //Single swipe handler for left swipes
     swipeRight:function(event, direction, distance, duration, fingerCount) {
       
-      $('.Start_Game-Two').toggleClass('popOutRight duration-250'); 
+      $('.Start_Game-Two').addClass('popOutRight duration-250'); 
       setTimeout(function(){
         $('.Start_Game-Two').css('display', 'none'); 
     }, 250); 
     
     setTimeout(function(){
       $('.cards_one').css('display', '');
-      $('.cards_one').toggleClass('popInLeft duration-450'); 
+      $('.cards_one').addClass('popInLeft duration-450'); 
       }, 300);
       console.log(count++);
     },
     
     //Default is 75px, set to 0 for demo so any distance triggers swipe
-    threshold:0
+    threshold: 75
   });
 });
  
-
-
-
-
-
 
 function changeItem_Left() {
   $('section').addClass('popOutLeft duration-450'); 

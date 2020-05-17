@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/vivify.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Игра сетевик</title>
+    <title>Игра сетевика</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
         <section class="Start_Game">
             <div class="game_network">
                 <div class="img_row row">
-                    <div class="img_networ col-md-12">
+                    <div class="img_network col-md-12">
                         <img src="img/Игра Сетевика 1.png" alt="">
                     </div>
                 </div>
@@ -68,8 +68,8 @@
                 <div class="btn_next CardsTwo col-md-12" onclick="changeItem_Left_CardsTwo()">
                     
                     <a href="#" class="btn_next"></a>
-                    <img src="img/Продолжить.png" alt="" style="z-index: -1;">
-                         
+                    <img src="img/Продолжить.png" alt="">
+
                 </div>
         </section>
         
@@ -77,10 +77,6 @@
        
         
         <section class='cards_one' style="display: none;">
-
-
-        
-
 
             <div class="event_card">
                 <div class="income row">
@@ -118,7 +114,7 @@
                     <div class="invite_row row">
                         <div class="invite col-md-12">
                             <p class="invite_text green">{{cards[0].done}}</p>
-                            <h4>{{ cards[0].condition}}</h4>
+                            <h4>{{cards[0].condition}}</h4>
                             <p class="invite_text">{{cards[0].false}}</p>
                         </div>
                     </div>
@@ -126,22 +122,22 @@
             </div>
            
 
-            <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()" @click ="round()" v-show="Next">
-                <v-touch @swiperight="round">
+            <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()"  v-show="Next">
+                <v-touch @swipeleft="round" @tap="round">
                 <a href="#" class="btn_next"></a>
                 <img src="img/Продолжить.png" alt="" style="z-index: -1;">
             </v-touch>
             </div>
 
-            <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft" @click ="round()">
-                <v-touch @swipeleft="round">
+            <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft" >
+                <v-touch @swipeleft="round_left"  @tap="round_left">
                     <a href="#" id="btn_no"></a>
                     <img src="img/Нет.png" alt="" class="btn_left">
                 </v-touch>
                 </div>
 
-                <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight" @click ="round()">
-                    <v-touch @swiperight="round">
+                <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight" >
+                    <v-touch @swiperight="round_right" @tap="round_right">
                         <a href="#" id="btn_left"></a>
                         <img src="img/Да.png" alt="" class="btn_right">
                     </v-touch>
