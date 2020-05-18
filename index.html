@@ -77,40 +77,35 @@
        
         
         <section class='cards_one' style="display: none;">
+            
 
-            <div class="event_card">
+
+
+            <div class="event_card" >
                 <div class="income row">
                     <div class="income_left col-md-6">
                         <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
-                        <h3 class="income_done">{{mounthly}}</h3>
+                        <h3 class="income_done">{{mounthly}}₽</h3>
                     </div>
                     <div class="income_right col-md-6">
                         <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
                         <h3 class="income_done">{{peoples}}</h3>
                     </div>
                 </div>
-            
                 <div class="action row">
                     <div class="action_left col-md-6">
                         <p class="income_text">БАЛАНС:</p>
-                        <h3 class="income_false">{{balance}}</h3>
+                        <h3 class="income_false">{{balance}}₽</h3>
                     </div>
                     <div class="action_right col-md-6">
                         <p class="income_text">ПОСЛЕДНЕЕ ДЕЙСТВИЕ:</p>
                         <h3 class="income_false"> {{LastAction}}₽</h3>
                     </div>
-
-
-
-
                     <div class="photo_sign row">
                         <div class="photo_sign_up col-md-12">
                             <img src="img/pablo-sign-up 1.png" alt="">
                         </div>
                     </div>
-
-
-                    
                     <div class="invite_row row">
                         <div class="invite col-md-12">
                             <p class="invite_text green">{{cards[0].done}}</p>
@@ -120,39 +115,77 @@
                     </div>
                 </div>
             </div>
-           
-
             <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()"  v-show="Next">
                 <v-touch @swipeleft="round" @tap="round">
                 <a href="#" class="btn_next"></a>
                 <img src="img/Продолжить.png" alt="" style="z-index: -1;">
             </v-touch>
             </div>
-
             <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft" >
                 <v-touch @swipeleft="round_left"  @tap="round_left">
                     <a href="#" id="btn_no"></a>
                     <img src="img/Нет.png" alt="" class="btn_left">
                 </v-touch>
                 </div>
-
                 <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight" >
                     <v-touch @swiperight="round_right" @tap="round_right">
                         <a href="#" id="btn_left"></a>
                         <img src="img/Да.png" alt="" class="btn_right">
                     </v-touch>
                     </div>
-        
+</section>
+
+
+
+
+
+
+
+
+        <section class="cvartal" style="display: none;">
+            <div class="report">
+                <div class="cvartal_report_row row">
+                    <div class="cvartal_report col-md-12">
+                    <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
+                    <p class="invite_text green">+300 человек в струкруту</p>
+                    <p class="invite_text green">+450 405₽ на балансе</p>
+                    <p class="invite_text">-45 000₽ ежемесячный доход</p>
+                    </div>
+                </div>
+                <div class="now_moments_row row">
+                    <div class="now_moments col-md-12">
+                        <h4>На данный момент:</h4>
+                        <div class="income row">
+                            <div class="income_left col-md-6">
+                                <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
+                                <h3 class="income_done">+1 000 000 ₽</h3>
+                            </div>
+                            <div class="income_right col-md-6">
+                                <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
+                                <h3 class="income_done">+45 403 челов.</h3>
+                            </div>
+                        </div>
+                        <div class="action row">
+                            <div class="action_left col-md-6">
+                                <p class="income_text">БАЛАНС:</p>
+                                <h3 class="income_false">500 000 ₽</h3>
+                            </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+
+            <div class="idea_row row">
+                <div class="idea col-md-12">
+                    <h5>Вы близки к цели!</h5>
+                </div>
+            </div>
+            </div>
+             <div class="btn_yes">
+                <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
+            </div>
         </section>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -207,50 +240,7 @@
             
         </section>
 
-        <section class="cvartal" style="display: none;">
-            <div class="report">
-                <div class="cvartal_report_row row">
-                    <div class="cvartal_report col-md-12">
-                    <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
-                    <p class="invite_text green">+300 человек в струкруту</p>
-                    <p class="invite_text green">+450 405₽ на балансе</p>
-                    <p class="invite_text">-45 000₽ ежемесячный доход</p>
-                    </div>
-                </div>
-                <div class="now_moments_row row">
-                    <div class="now_moments col-md-12">
-                        <h4>На данный момент:</h4>
-                        <div class="income row">
-                            <div class="income_left col-md-6">
-                                <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
-                                <h3 class="income_done">+1 000 000 ₽</h3>
-                            </div>
-                            <div class="income_right col-md-6">
-                                <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
-                                <h3 class="income_done">+45 403 челов.</h3>
-                            </div>
-                        </div>
-                        <div class="action row">
-                            <div class="action_left col-md-6">
-                                <p class="income_text">БАЛАНС:</p>
-                                <h3 class="income_false">500 000 ₽</h3>
-                            </div>
-                    </div>
-                </div>
-                
-               
-            </div>
-
-            <div class="idea_row row">
-                <div class="idea col-md-12">
-                    <h5>Вы близки к цели!</h5>
-                </div>
-            </div>
-            </div>
-             <div class="btn_yes">
-                <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
-            </div>
-        </section>
+       
 
         <section class="swirl" style="display: none;">
             <div class="container">

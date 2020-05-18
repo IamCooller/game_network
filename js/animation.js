@@ -33,9 +33,6 @@
  
 
 
-
-
-
 $(function() {      
   //Keep track of how many swipes
   var count=0;
@@ -43,20 +40,17 @@ $(function() {
   //Enable swiping...
   $(".CardsTwo").swipe( {
     //Single swipe handler for left swipes
-    swipeRight:function(event, direction, distance, duration, fingerCount) {
-      
+    swipeRight:function(event, direction, distance, duration, fingerCount) { 
       $('.Start_Game-Two').addClass('popOutRight duration-250'); 
       setTimeout(function(){
         $('.Start_Game-Two').css('display', 'none'); 
     }, 250); 
-    
     setTimeout(function(){
       $('.cards_one').css('display', '');
       $('.cards_one').addClass('popInLeft duration-450'); 
       }, 300);
       console.log(count++);
     },
-    
     //Default is 75px, set to 0 for demo so any distance triggers swipe
     threshold: 75
   });
@@ -102,3 +96,10 @@ setTimeout(function(){
   $('.cards_one').toggleClass('popInLeft duration-450'); 
   }, 300);
 }
+
+
+  $('.cards_one').ready( function(){
+    var count = 0;
+    console.log(count++)
+  });
+

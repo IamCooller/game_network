@@ -14,6 +14,7 @@ new Vue({
         Buttons:true,
         none: false,
         Next: true,
+        count:0,
         cards:[
             {
             "id": 1,
@@ -24,8 +25,7 @@ new Vue({
             "id": 2,
             "condition": "Сетевой бизнес - это когда ты строишь маленькую экономику на рельном товаре. Вы готовы стартануть прямо сейчас? ",
             "Buttons": false,
-            "false": "Это действие стоит - 10000",
-           
+            "false": "Это действие стоит - 10000₽",
             },
             {
             "id": 3,
@@ -39,7 +39,6 @@ new Vue({
             {
             "id": 4,
              "condition": "Рассказать своим друзьям и родственникам о новом проэкте",
-             
             },
             {
                 "id": 5,
@@ -55,7 +54,6 @@ new Vue({
             {
                 "id":6,
                 "condition": "Пройти обучение у лидера",
-                
             },
             {
                 "id":7,
@@ -68,28 +66,35 @@ new Vue({
             {
                 "id":9,
                 "condition": "Распечатать свои визитки. Будет стоить 1000 рублей",
+                "false": "Это действие стоит - 1000₽"
+            },
+            {
+                "id":10,
+                "change": 1000,
+                "Buttons": false,
+                "action": 0,
+                "false": "Это действие стоит - 1000₽",
+                "LastAction": -1000,
             },
         ]
 
     },
     methods: {
         round: function(){
-            this.cards.shift();
+            setTimeout(function(){this.cards.shift()}.bind(this), 500);
             console.log(this.cards[0].id);
-            this.check_balance();
+            setTimeout(function(){this.check_balance()}.bind(this), 500);
         },
         round_left:function(){
-            this.cards.shift();
-            this.check_round_left();
-            this.check_balance();
-            this.balance += this.peoples * 2000;
+            setTimeout(function(){this.cards.shift()}.bind(this), 500);
+            setTimeout(function(){this.check_round_left()}.bind(this), 500);
+            setTimeout(function(){this.check_balance()}.bind(this), 500);
             console.log(this.cards[0].id);
         },
         round_right:function (){
-            this.cards.shift();
-            this.check_balance();
-            this.check_round_right();
-            this.balance += this.peoples * 2000;
+            setTimeout(function(){this.cards.shift()}.bind(this), 500);
+            setTimeout(function(){this.check_round_right()}.bind(this), 500);
+            setTimeout(function(){this.check_balance()}.bind(this), 500);
             console.log(this.cards[0].id);
         },
         check_balance:function(){
@@ -152,6 +157,7 @@ new Vue({
             } */
     },
     check_round_left:function(){
+        this.balance += this.peoples * 2000;
         if(this.cards[0].id == 5)
         {
             this.cards.shift();
@@ -161,6 +167,7 @@ new Vue({
         }
     },
     check_round_right:function(){
+        this.balance += this.peoples * 2000;
         if(this.cards[0].id == 5)
         {
         this.cards[0].id.splice(id,7);
