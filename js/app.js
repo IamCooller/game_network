@@ -4,7 +4,8 @@ Vue.use(VueTouch, {name: 'v-touch'});
 new Vue({
     el: '#app',
     data: {
-        card_counter: 1,
+        report: false, // ТУТ СДЕЛАТЬ ПРОВЕРКУ НА ОТЧЕТ
+        card_counter: 0, // ТУТ СЧИТАЕТСЯ КАУНТЕР
         mounthly:0,
         peoples:0,
         balance: 20000,
@@ -57,19 +58,23 @@ new Vue({
             },
             {
                 "id":7,
-                "condition": "Создать страницы в социальных сетях",
+                "Buttons": false,
             },
             {
                 "id":8,
-                "condition": "Пройти вебинар, который организует компания. Обучение займет много времени",
+                "condition": "Создать страницы в социальных сетях",
             },
             {
                 "id":9,
+                "condition": "Пройти вебинар, который организует компания. Обучение займет много времени",
+            },
+            {
+                "id":10,
                 "condition": "Распечатать свои визитки. Будет стоить 1000 рублей",
                 "false": "Это действие стоит - 1000₽"
             },
             {
-                "id":10,
+                "id":11,
                 "change": 1000,
                 "Buttons": false,
                 "action": 0,
@@ -84,18 +89,37 @@ new Vue({
             setTimeout(function(){this.cards.shift()}.bind(this), 500);
             console.log(this.cards[0].id);
             setTimeout(function(){this.check_balance()}.bind(this), 500);
+            setTimeout(function(){this.quarterly_report()}.bind(this), 500);
+            console.log(this.card_counter);
         },
         round_left:function(){
             setTimeout(function(){this.cards.shift()}.bind(this), 500);
             setTimeout(function(){this.check_round_left()}.bind(this), 500);
             setTimeout(function(){this.check_balance()}.bind(this), 500);
+            setTimeout(function(){this.check_balance()}.bind(this), 500);
+            setTimeout(function(){this.quarterly_report()}.bind(this), 500);
             console.log(this.cards[0].id);
+            console.log(this.card_counter);
         },
         round_right:function (){
             setTimeout(function(){this.cards.shift()}.bind(this), 500);
             setTimeout(function(){this.check_round_right()}.bind(this), 500);
             setTimeout(function(){this.check_balance()}.bind(this), 500);
+            setTimeout(function(){this.quarterly_report()}.bind(this), 500);
             console.log(this.cards[0].id);
+            console.log(this.card_counter);
+        },
+        quarterly_report: function(){
+            this.card_counter++;
+            console.log(this.report)
+            if(this.card_counter == 6){
+                this.report = true;
+                this.mounthly = 2000 * this.peoples;
+                return this.card_counter == 0;
+            }
+            else{ 
+                this.report = false;
+            }
         },
         check_balance:function(){
             switch(this.cards[0].action){
@@ -160,19 +184,18 @@ new Vue({
         this.balance += this.peoples * 2000;
         if(this.cards[0].id == 5)
         {
-            this.cards.shift();
             this.cards[0].condition="Ничего не произошло";
+            this.cards[0].done=" ";
+            this.cards[0].change=0;
+            this.cards[0].LastAction= 0;
+            this.cards[0].change_peoples= 0;
             this.cards[0].Buttons= false;
             console.log(true);
         }
     },
     check_round_right:function(){
         this.balance += this.peoples * 2000;
-        if(this.cards[0].id == 5)
-        {
-        this.cards[0].id.splice(id,7);
-            console.log(false);
-        }
+        
     }
 }
 });

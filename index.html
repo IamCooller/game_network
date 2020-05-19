@@ -78,10 +78,46 @@
         
         <section class='cards_one' style="display: none;">
             
+            <div class="report" v-if='report'> <!-- СЮДА ПОМЕСТИЛ ОТЧЕТ И ЧЕРЕЗ V-IF ДЕЛАЮ ПРОВЕРКУ, ЕСЛИ REPORT = TRUE, ТО ПОКАЗЫВАЮ ОТЧЕТ -->
+                <div class="cvartal_report_row row">
+                    <div class="cvartal_report col-md-12">
+                    <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
+                    <p class="invite_text green">+{{peoples}} человек в струкруту</p>
+                    <p class="invite_text green">+{{balance}}₽ на балансе</p>
+                    <p class="invite_text">{{mounthly}}₽ ежемесячный доход</p>
+                    </div>
+                </div>
+                <div class="now_moments_row row">
+                    <div class="now_moments col-md-12">
+                        <h4>На данный момент:</h4>
+                        <div class="income row">
+                            <div class="income_left col-md-6">
+                                <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
+                                <h3 class="income_done">{{mounthly}}₽</h3>
+                            </div>
+                            <div class="income_right col-md-6">
+                                <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
+                                <h3 class="income_done">{{peoples}}</h3>
+                            </div>
+                        </div>
+                        <div class="action row">
+                            <div class="action_left col-md-6">
+                                <p class="income_text">БАЛАНС:</p>
+                                <h3 class="income_false">{{balance}}₽</h3>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="idea_row row">
+                <div class="idea col-md-12">
+                    <h5>Вы близки к цели!</h5>
+                </div>
+            </div>
+            </div>
 
 
 
-            <div class="event_card" >
+            <div class="event_card" v-else-if='!report'>
                 <div class="income row">
                     <div class="income_left col-md-6">
                         <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
