@@ -3,7 +3,7 @@ $(function () {
     swipeLeft: function (event, direction, distance, duration, fingerCount) {
       $("section").addClass("popOutLeft duration-450");
       setTimeout(function () {
-        $("section").removeClass("popOutLeft duration-450");
+        $("section").removeClass("popOutLeft");
       }, 500);
     },
     threshold: 75,
