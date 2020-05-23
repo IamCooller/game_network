@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/vivify.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Игра сетевика</title>
 </head>
+
 <body>
 
-   
+
     <main id="app">
-      
+
         <section class="Start_Game">
             <div class="game_network">
                 <div class="img_row row">
@@ -21,13 +24,13 @@
                         <img src="img/Игра Сетевика 1.png" alt="">
                     </div>
                 </div>
-                
+
                 <div class="info_game_row row">
                     <div class="info_game col-md-12">
                         <p>Создайте самую богатую сетевую структуру в реалистичной игре!</p>
                     </div>
                 </div>
-                
+
                 <div class="btn_game_row row" onclick="changeItem_Star()">
                     <div class="btn_game col-md-12 ">
                         <a href="#"><img src="img/КНОПКА.png" alt=""></a>
@@ -39,52 +42,55 @@
 
         <section class="Start_Game-Two" style="display: none;">
 
-                <div class="rules">
-                    <div class="HowToPlay_row row">
-                        <div class="HowToPlay col-md-12">
-                            <h2>КАК ИГРАТЬ:</h2>
-                        </div>
+            <div class="rules">
+                <div class="HowToPlay_row row">
+                    <div class="HowToPlay col-md-12">
+                        <h2>КАК ИГРАТЬ:</h2>
                     </div>
-                    <div class="rulesPlay_row row">
-                        <div class="rulesPlay col-md-12">
-                            <p>В игре вы будете <br> оценивать ситуацию и <br> принимать решение. <br>
-                                <span class="say">Нужно отвечать:</span> <span class="yes">Да</span> / <span class='no'>Нет</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="browse_row row">
-                        <div class="browse col-md-12">
-                            <h2 class="browse_text">ПОПРОБУЙТЕ:</h2>
-                        </div>
-                    </div>
-                    <div class="browse_tape_row row">
-                        <div class="browse_tape col-md-12">
-                            <p>Проведите пальцем вправо или нажмите на зеленую кнопку, чтобы ответить <span class="tape_yes">ДА</span></p>
-                        </div>
-                    </div>
-                    
                 </div>
-                <!-- /.rules -->
-                <div class="btn_next CardsTwo col-md-12" onclick="changeItem_Left_CardsTwo()">
-                    
-                    <a href="#" class="btn_next"></a>
-                    <img src="img/Продолжить.png" alt="">
+                <div class="rulesPlay_row row">
+                    <div class="rulesPlay col-md-12">
+                        <p>В игре вы будете <br> оценивать ситуацию и <br> принимать решение. <br>
+                            <span class="say">Нужно отвечать:</span> <span class="yes">Да</span> / <span
+                                class='no'>Нет</span></p>
+                    </div>
+                </div>
 
+                <div class="browse_row row">
+                    <div class="browse col-md-12">
+                        <h2 class="browse_text">ПОПРОБУЙТЕ:</h2>
+                    </div>
                 </div>
+                <div class="browse_tape_row row">
+                    <div class="browse_tape col-md-12">
+                        <p>Проведите пальцем вправо или нажмите на зеленую кнопку, чтобы ответить <span
+                                class="tape_yes">ДА</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.rules -->
+            <div class="btn_next CardsTwo col-md-12" onclick="changeItem_Left_CardsTwo()">
+
+                <a href="#" class="btn_next"></a>
+                <img src="img/Продолжить.png" alt="">
+
+            </div>
         </section>
-        
-            
-       
-        
+
+
+
+
         <section class='cards_one' style="display: none;">
-            
-            <div class="report" v-if='report'> <!-- СЮДА ПОМЕСТИЛ ОТЧЕТ И ЧЕРЕЗ V-IF ДЕЛАЮ ПРОВЕРКУ, ЕСЛИ REPORT = TRUE, ТО ПОКАЗЫВАЮ ОТЧЕТ -->
+
+            <div class="report" v-if='report'>
+                <!-- СЮДА ПОМЕСТИЛ ОТЧЕТ И ЧЕРЕЗ V-IF ДЕЛАЮ ПРОВЕРКУ, ЕСЛИ REPORT = TRUE, ТО ПОКАЗЫВАЮ ОТЧЕТ -->
                 <div class="cvartal_report_row row">
                     <div class="cvartal_report col-md-12">
-                    <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
-                    <p class="invite_text green">+{{peoples}} человек в струкруту</p>
-                    <p class="invite_text green">+{{balance}}₽ на балансе</p>
-                    <p class="invite_text">{{mounthly}}₽ ежемесячный доход</p>
+                        <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
+                        <p class="invite_text green">+{{peoples}} человек в струкруту</p>
+                        <p class="invite_text green">+{{balance}}₽ на балансе</p>
+                        <p class="invite_text">{{mounthly}}₽ ежемесячный доход</p>
                     </div>
                 </div>
                 <div class="now_moments_row row">
@@ -105,14 +111,14 @@
                                 <p class="income_text">БАЛАНС:</p>
                                 <h3 class="income_false">{{balance}}₽</h3>
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="idea_row row">
-                <div class="idea col-md-12">
-                    <h5>Вы близки к цели!</h5>
+                <div class="idea_row row">
+                    <div class="idea col-md-12">
+                        <h5>Вы близки к цели!</h5>
+                    </div>
                 </div>
-            </div>
             </div>
 
 
@@ -151,25 +157,25 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()"  v-show="Next">
-                <v-touch @swipeleft="round" @tap="round">
-                <a href="#" class="btn_next"></a>
-                <img src="img/Продолжить.png" alt="" style="z-index: -1;">
-            </v-touch>
+            <div class="btn_next CardsTwo Cards_next col-md-12" onclick="changeItem_Left()" v-show="Next">
+                <v-touch @swiperight="round" @tap="round">
+                    <a href="#" class="btn_next"></a>
+                    <img src="img/Продолжить.png" alt="" style="z-index: -1;">
+                </v-touch>
             </div>
-            <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft" >
-                <v-touch @swipeleft="round_left"  @tap="round_left">
+            <div onclick="changeItem_Right()" class="btn_no" v-show="ButtonsLeft">
+                <v-touch @swipeleft="round_left" @tap="round_left">
                     <a href="#" id="btn_no"></a>
                     <img src="img/Нет.png" alt="" class="btn_left">
                 </v-touch>
-                </div>
-                <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight" >
-                    <v-touch @swiperight="round_right" @tap="round_right">
-                        <a href="#" id="btn_left"></a>
-                        <img src="img/Да.png" alt="" class="btn_right">
-                    </v-touch>
-                    </div>
-</section>
+            </div>
+            <div onclick="changeItem_Left()" class="btn_yes" v-show="ButtonsRight">
+                <v-touch @swiperight="round_right" @tap="round_right">
+                    <a href="#" id="btn_left"></a>
+                    <img src="img/Да.png" alt="" class="btn_right">
+                </v-touch>
+            </div>
+        </section>
 
 
 
@@ -182,10 +188,10 @@
             <div class="report">
                 <div class="cvartal_report_row row">
                     <div class="cvartal_report col-md-12">
-                    <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
-                    <p class="invite_text green">+300 человек в струкруту</p>
-                    <p class="invite_text green">+450 405₽ на балансе</p>
-                    <p class="invite_text">-45 000₽ ежемесячный доход</p>
+                        <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
+                        <p class="invite_text green">+300 человек в струкруту</p>
+                        <p class="invite_text green">+450 405₽ на балансе</p>
+                        <p class="invite_text">-45 000₽ ежемесячный доход</p>
                     </div>
                 </div>
                 <div class="now_moments_row row">
@@ -206,19 +212,19 @@
                                 <p class="income_text">БАЛАНС:</p>
                                 <h3 class="income_false">500 000 ₽</h3>
                             </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="idea_row row">
+                    <div class="idea col-md-12">
+                        <h5>Вы близки к цели!</h5>
                     </div>
                 </div>
-                
-               
             </div>
-
-            <div class="idea_row row">
-                <div class="idea col-md-12">
-                    <h5>Вы близки к цели!</h5>
-                </div>
-            </div>
-            </div>
-             <div class="btn_yes">
+            <div class="btn_yes">
                 <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
             </div>
         </section>
@@ -232,7 +238,7 @@
 
 
 
-        
+
         <section id="superellips" style="display: none;">
             <div class="event_card">
                 <div class="income row">
@@ -263,25 +269,25 @@
                     <div class="invite_row row">
                         <div class="invite col-md-12">
                             <p class="invite_text green">+ 300 человек в струкруту</p>
-                            <h4>На мероприятия вы встретили действующего лидера и он захотел присоединиться к вам</h4>  
+                            <h4>На мероприятия вы встретили действующего лидера и он захотел присоединиться к вам</h4>
                         </div>
                     </div>
                 </div>
             </div>
-           
-                <div class="btn_yes option_btn">
-                    <a href=""></a><img src="img/Действие - Да-стрелка.png" alt="">
-                </div>
-        
-            
+
+            <div class="btn_yes option_btn">
+                <a href=""></a><img src="img/Действие - Да-стрелка.png" alt="">
+            </div>
+
+
         </section>
 
-       
+
 
         <section class="swirl" style="display: none;">
             <div class="container">
                 <div class="row">
-                     <h1>ВАШИ ИТОГОВЫЕ РЕЗУЛЬТАТЫ:</h1>
+                    <h1>ВАШИ ИТОГОВЫЕ РЕЗУЛЬТАТЫ:</h1>
                 </div>
                 <div class="row">
                     <div class="done col-md-12">
@@ -303,28 +309,32 @@
                 </div>
 
                 <div class="row">
-                    <p>Вы умеете видеть перспективы и оценивать приоритеты. Быстро принимаете решение и умеете находить баланс</p>
+                    <p>Вы умеете видеть перспективы и оценивать приоритеты. Быстро принимаете решение и умеете находить
+                        баланс</p>
                 </div>
                 <div class="row">
-                    <h5>Хотите узнать какие в ваши решения привели вас к такому результату и как вы сталкиваетесь с ними в своей жизни?</h5>
-            
+                    <h5>Хотите узнать какие в ваши решения привели вас к такому результату и как вы сталкиваетесь с ними
+                        в своей жизни?</h5>
+
         </section>
 
         <section class="swirl" style="display: none;">
             <div class="container">
                 <div class="row">
-                    <div class="user col-md-12">           
-                    <div class="photo_user">
-                        <img src="img/SharedScreenshot 1.png" alt="">
+                    <div class="user col-md-12">
+                        <div class="photo_user">
+                            <img src="img/SharedScreenshot 1.png" alt="">
+                        </div>
+                        <div class="user_Lesa">
+                            <h5>Леся Левченок</h5>
+                            <p>автор игры</p>
+                        </div>
                     </div>
-                    <div class="user_Lesa">
-                        <h5>Леся Левченок</h5>
-                    <p>автор игры</p>
-                    </div>
-                </div>
                 </div>
                 <div class="row">
-                    <p>Вместе со своей командой мы создали единственный в мире симулятор жизни сетевика. Чтобы вы могли без ущерба посмотреть какие решения приносят результат, а какие наоборот разрушают. В своем Instagram я записала короткие видео с разбором ситуаций из игры.</p>
+                    <p>Вместе со своей командой мы создали единственный в мире симулятор жизни сетевика. Чтобы вы могли
+                        без ущерба посмотреть какие решения приносят результат, а какие наоборот разрушают. В своем
+                        Instagram я записала короткие видео с разбором ситуаций из игры.</p>
                 </div>
                 <div class="row">
                     <h5>Посмотрите бесплатно в моем Instagram, делитесь своим мнением!</h5>
@@ -339,18 +349,17 @@
 
     </main>
 
-    <script
-  src="https://code.jquery.com/jquery-3.5.0.slim.js"
-  integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE="
-  crossorigin="anonymous"></script>
-  <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
+        integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/hammer.min.js"></script>
     <script src="js/vue-touch.js"></script>
     <script src="js/index.js"></script>
- 
+
     <script src="js/animation.js"></script>
     <script src="js/app.js"></script>
-  
+
 </body>
+
 </html>
