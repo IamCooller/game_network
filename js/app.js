@@ -90,7 +90,7 @@ new Vue({
         id: 9,
         condition:
           "Во время обучения у лидера вы смогли научиться новым техникам продаж.",
-        done: "+3 человека в команду",
+        done: "+3 человека",
         Buttons: false,
         change_peoples: 3,
         action_peoples: 1,
@@ -225,7 +225,7 @@ new Vue({
       },
       {
         id_V2: 7,
-        done: "+30000 рублей к балансу",
+        done: "+30000 рублей",
         change: 30000,
         action: 1,
         Buttons: false,
@@ -334,7 +334,7 @@ new Vue({
       },
       {
         id_V3: 5,
-        false: "Урон балансу -20000 рублей",
+        false: "-20000 рублей",
         change: 20000,
         action: 0,
         Buttons: false,
@@ -513,10 +513,10 @@ new Vue({
       switch (this.cards[0].Tswirl) {
         case 1:
           this.swirl = true;
-            this.none = false;
-            this.ButtonsLeft = false;
-            this.ButtonsRight = false;
-            this.Next = false;
+          this.none = false;
+          this.ButtonsLeft = false;
+          this.ButtonsRight = false;
+          this.Next = false;
           break;
       }
       switch (this.cards[0].img_main) {
