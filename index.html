@@ -16,6 +16,9 @@
 
 
     <main id="app">
+
+
+
         <section class="Start_Game">
             <div class="game_network">
                 <div class="img_row row">
@@ -83,16 +86,16 @@
 
             <div class="report" v-if='report'>
                 <!-- СЮДА ПОМЕСТИЛ ОТЧЕТ И ЧЕРЕЗ V-IF ДЕЛАЮ ПРОВЕРКУ, ЕСЛИ REPORT = TRUE, ТО ПОКАЗЫВАЮ ОТЧЕТ -->
-                <div class="cvartal_report_row row" style="margin-bottom: 20%;">
+                <div class="cvartal_report_row row" style="margin-bottom: 10%;">
                     <div class="cvartal_report col-md-12">
-                        <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
+                        <h4 style="margin-top: 20%;">КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
                         <p class="invite_text green">+{{peoples}} человек в струкруту</p>
                         <p class="invite_text green">+{{balance}}₽ на балансе</p>
                         <p class="invite_text">{{mounthly}}₽ ежемесячный доход</p>
                     </div>
                 </div>
-                <div class="now_moments_row row" style="margin-bottom: 20%;">
-                    <div class="now_moments col-md-12">
+                <div class="now_moments_row row" style="margin-bottom: 10%;">
+                    <div class="now_moments col-md-12" style="padding-top: 10%;">
                         <h4>На данный момент:</h4>
                         <div class="income row">
                             <div class="income_left col-md-6">
@@ -105,7 +108,7 @@
                             </div>
                         </div>
                         <div class="action row">
-                            <div class="action_left col-md-6" style="margin-bottom: 20px;">
+                            <div class="action_left col-md-6" style="margin-bottom: 10px;">
                                 <p class="income_text">БАЛАНС:</p>
                                 <h3 class="income_false">{{balance}}₽</h3>
                             </div>
@@ -154,7 +157,7 @@
                     <div class="invite_row row">
                         <div class="invite col-md-12">
                             <div class="resultat" v-show="result">
-                                <h3 style="padding: 0; margin: 0; font-weight: bold;">Результат:</h3>
+                                <h3 style="padding: 0; font-weight: bold;">Результат:</h3>
                             </div>
                             <p class="invite_text green">{{cards[0].done}}</p>
                             <h4 style="line-height: 27px;">{{cards[0].condition}}</h4>
@@ -183,114 +186,34 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
-        <section class="cvartal" style="display: none;">
-            <div class="report">
-                <div class="cvartal_report_row row">
-                    <div class="cvartal_report col-md-12">
-                        <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
-                        <p class="invite_text green">+300 человек в струкруту</p>
-                        <p class="invite_text green">+450 405₽ на балансе</p>
-                        <p class="invite_text">-45 000₽ ежемесячный доход</p>
-                    </div>
-                </div>
-                <div class="now_moments_row row">
-                    <div class="now_moments col-md-12">
-                        <h4>На данный момент:</h4>
-                        <div class="income row">
-                            <div class="income_left col-md-6">
-                                <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
-                                <h3 class="income_done">+1 000 000 ₽</h3>
-                            </div>
-                            <div class="income_right col-md-6">
-                                <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
-                                <h3 class="income_done">+45 403 челов.</h3>
-                            </div>
-                        </div>
-                        <div class="action row">
-                            <div class="action_left col-md-6">
-                                <p class="income_text">БАЛАНС:</p>
-                                <h3 class="income_false">500 000 ₽</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="idea_row row">
-                    <div class="idea col-md-12">
-                        <h5>Вы близки к цели!</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="btn_yes">
-                <a href="#"></a><img src="img/Действие - Да-стрелка.png" alt="">
+        <section class="result_class" v-show="swirl">
+            <div class="result" style="margin-top: 60%;">
+                <p><span>Вы - прирожденный лидер.</span> Мы подготовили для вас результаты игры</p>
+                <a href="#" onclick="loader()"><img src="img/КНОПКА_result.png" alt=""></a>
             </div>
         </section>
+        <section class="loader" style="display: none;">
+            <div class="cssload-dots">
+                <div class="cssload-dot"></div>
+                <div class="cssload-dot"></div>
+                <div class="cssload-dot"></div>
+                <div class="cssload-dot"></div>
+                <div class="cssload-dot"></div>
 
-
-
-
-
-
-
-
-
-
-
-        <section id="superellips" style="display: none;">
-            <div class="event_card">
-                <div class="income row">
-                    <div class="income_left col-md-6">
-                        <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
-                        <h3 class="income_done">+1 000 000 ₽</h3>
-                    </div>
-                    <div class="income_right col-md-6">
-                        <p class="income_text">ЛЮДЕЙ В СТРУКТУРЕ</p>
-                        <h3 class="income_done">+45 403 челов.</h3>
-                    </div>
-                </div>
-
-                <div class="action row">
-                    <div class="action_left col-md-6">
-                        <p class="income_text">БАЛАНС:</p>
-                        <h3 class="income_false">500 000 ₽</h3>
-                    </div>
-                    <div class="action_right col-md-6">
-                        <p class="income_text">ПОСЛЕДНЕЕ ДЕЙСТВИЕ:</p>
-                        <h3 class="income_false">- 2000 ₽</h3>
-                    </div>
-                    <div class="photo_sign row">
-                        <div class="photo_sign_up col-md-12">
-                            <img src="img/pablo-sign-up 1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="invite_row row">
-                        <div class="invite col-md-12">
-                            <p class="invite_text green">+ 300 человек в струкруту</p>
-                            <h4>На мероприятия вы встретили действующего лидера и он захотел присоединиться к вам</h4>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <div class="btn_yes option_btn">
-                <a href=""></a><img src="img/Действие - Да-стрелка.png" alt="">
-            </div>
-
-
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7"
+                            result="goo"></feColorMatrix>
+                        <!--<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>-->
+                    </filter>
+                </defs>
+            </svg>
+            <h1 style="text-align: center;">Loading...</h1>
         </section>
-
-
-
-        <section class="swirl" style="display: none;">
+        <section class="end_game" style="display: none;">
             <div class="container">
                 <div class="row">
                     <h1>ВАШИ ИТОГОВЫЕ РЕЗУЛЬТАТЫ:</h1>
@@ -298,19 +221,19 @@
                 <div class="row">
                     <div class="done col-md-12">
                         <h2>ЕЖЕМЕСЯЧЫЙ ДОХОД:</h2>
-                        <p>1 000 000 ₽</p>
+                        <p>{{mounthly}}₽</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="done col-md-12">
                         <h2>ЛЮДЕЙ В СТРУКТУРЕ</h2>
-                        <p>45 403 человек</p>
+                        <p>{{peoples}} человек</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="done col-md-12">
                         <h2>БАЛАНС:</h2>
-                        <p>500 000 ₽</p>
+                        <p>{{balance}}₽</p>
                     </div>
                 </div>
 
@@ -321,10 +244,12 @@
                 <div class="row">
                     <h5>Хотите узнать какие в ваши решения привели вас к такому результату и как вы сталкиваетесь с ними
                         в своей жизни?</h5>
-
+                </div>
+                <a href="#" onclick="admin()"><img src="img/КНОПКА_look.png" alt=""></a>
+            </div>
         </section>
 
-        <section class="swirl" style="display: none;">
+        <section class="admin" style="display: none;">
             <div class="container">
                 <div class="row">
                     <div class="user col-md-12">

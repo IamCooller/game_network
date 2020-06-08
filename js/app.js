@@ -22,6 +22,7 @@ new Vue({
     downloading_img: false,
     searching_img: false,
     coming_img: false,
+    swirl: false,
     Next: true,
     count: 0,
     cards: [
@@ -59,11 +60,13 @@ new Vue({
       },
       {
         id: 5,
-        condition: "Рассказать своим друзьям и родственникам о новом проэкте",
+        condition: "Рассказать своим друзьям и родственникам о новом проекте",
       },
       {
         id: 6,
-        done: "2 человека в структуру и +10000 рублей на баланс",
+        done: "+2 человека и +10000 рублей",
+        condition:
+          "Вы нашли 15 человек, но многие из них отказались вас слушать, однако, вам удалось убедить 2 людей присоедениться.",
         change: 10000,
         action: 1,
         Buttons: false,
@@ -122,7 +125,7 @@ new Vue({
       {
         id: 14,
         condition: "Теперь больше людей знают о вас.",
-        done: "+4 человек в структуру",
+        done: "+4 человек",
         change_peoples: 4,
         action_peoples: 1,
         Buttons: false,
@@ -138,7 +141,7 @@ new Vue({
       {
         id: 16,
         condition: "Это мудрое решение, на обучении вы встретили новых людей.",
-        done: "+5 человек в структуру",
+        done: "+5 человек",
         change_peoples: 4,
         action_peoples: 1,
         Buttons: false,
@@ -156,7 +159,7 @@ new Vue({
         Buttons: false,
         action: 0,
         condition: "Ваши визитки стали дарить новым людям.",
-        done: "+7 человек в структуру",
+        done: "+7 человек",
         change_peoples: 7,
         action_peoples: 1,
         LastAction: -1000,
@@ -188,7 +191,7 @@ new Vue({
       {
         id_V2: 2,
         condition: "Вы задавали хорошие вопросы и увеличили свое влияние",
-        done: "+5 человек в струкруту",
+        done: "+5 человек",
         change_peoples: 5,
         action_peoples: 1,
         img_main: 1,
@@ -239,7 +242,7 @@ new Vue({
       {
         id_V2: 9,
         condition:
-          "На нетворкинге вы встретили лидера структуры. Вы так мастерски объяснили свой палн, что он примкнул к вашей команде.",
+          "На нетворкинге вы встретили лидера структуры. Вы так мастерски объяснили свой план, что он примкнул к вашей команде.",
         done: "+20 человек",
         change_peoples: 20,
         action_peoples: 1,
@@ -256,7 +259,7 @@ new Vue({
       {
         id_V2: 11,
         condition: "Новый телефон позволил вам быть эффективней.",
-        done: "+5 человек в структуре",
+        done: "+5 человек",
         change_peoples: 5,
         action_peoples: 1,
         img_main: 1,
@@ -277,7 +280,7 @@ new Vue({
       {
         id_V2: 14,
         condition: "На мероприятии вы смогли найти новых людей в структуру",
-        done: "+4 человека",
+        done: "+4 человек",
         change_peoples: 4,
         img_main: 1,
         Tresult: 1,
@@ -376,6 +379,9 @@ new Vue({
         action: 0,
         Buttons: false,
         LastAction: "-5000",
+      },
+      {
+        Tswirl: 1,
       },
       //---------------------------------ЧАСТЬ 4------------------
     ],
@@ -502,6 +508,11 @@ new Vue({
           break;
         default:
           this.result = false;
+          break;
+      }
+      switch (this.cards[0].Tswirl) {
+        case 1:
+          this.swirl = true;
           break;
       }
       switch (this.cards[0].img_main) {

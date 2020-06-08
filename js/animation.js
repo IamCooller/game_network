@@ -104,6 +104,40 @@ function changeItem_Left_CardsTwo() {
   }, 300);
 }
 
+function loader() {
+  $(".cards_one").css("display", "none");
+  $(".result_class").toggleClass("popOutLeft duration-450");
+  setTimeout(function () {
+    $(".result_class").css("display", "none");
+  }, 249);
+  setTimeout(function () {
+    $(".loader").css("display", "");
+    $(".loader").toggleClass("popInRight duration-450");
+  }, 300);
+  setTimeout(function () {
+    $(".loader").toggleClass("popOutLeft duration-250");
+    setTimeout(function () {
+      $(".loader").css("display", "none");
+    }, 249);
+    setTimeout(function () {
+      $(".end_game").css("display", "");
+      $(".end_game").toggleClass("popOutRight duration-450");
+    }, 300);
+  }, 4400);
+}
+
+function admin() {
+  $(".end_game").toggleClass("popOutLeft duration-250");
+  setTimeout(function () {
+    $(".end_game").css("display", "none");
+  }, 249);
+
+  setTimeout(function () {
+    $(".admin").css("display", "");
+    $(".admin").toggleClass("popInRight duration-450");
+  }, 300);
+}
+
 $(".cards_one").ready(function () {
   var count = 0;
   console.log(count++);
