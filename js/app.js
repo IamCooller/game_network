@@ -653,7 +653,7 @@ new Vue({
         case 9:
           this.cards[0].condition = "Ничего не происходит";
           this.cards[0].done = " ";
-          this.catds[0].false = " ";
+          this.cards[0].false = " ";
           this.cards[0].change = 0;
           this.cards[0].LastAction = 0;
           this.cards[0].change_peoples = 0;
