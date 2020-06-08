@@ -1,28 +1,38 @@
 $(function () {
   $(".btn_no").swipe({
     swipeLeft: function (event, direction, distance, duration, fingerCount) {
-      $("section").addClass("popOutLeft duration-450");
+      $("section").toggleClass("popOutLeft duration-250");
       setTimeout(function () {
         $("section").removeClass("popOutLeft");
-      }, 500);
+      }, 300);
+      setTimeout(function () {
+        $("section").toggleClass("popInRight duration-250");
+      }, 340);
     },
     threshold: 75,
   });
+
   $(".btn_next").swipe({
     swipeRight: function (event, direction, distance, duration, fingerCount) {
-      $("section").addClass("popOutRight duration-450");
+      $("section").toggleClass("popOutRight duration-250");
       setTimeout(function () {
         $("section").removeClass("popOutRight");
-      }, 500);
+      }, 300);
+      setTimeout(function () {
+        $("section").toggleClass("popInLeft duration-250");
+      }, 340);
     },
     threshold: 75,
   });
   $(".btn_yes").swipe({
     swipeRight: function (event, direction, distance, duration, fingerCount) {
-      $("section").addClass("popOutRight duration-450");
+      $("section").toggleClass("popOutRight duration-250");
       setTimeout(function () {
         $("section").removeClass("popOutRight");
-      }, 500);
+      }, 300);
+      setTimeout(function () {
+        $("section").toggleClass("popInLeft duration-250");
+      }, 340);
     },
     threshold: 75,
   });
@@ -52,17 +62,23 @@ $(function () {
 });
 
 function changeItem_Left() {
-  $("section").addClass("popOutLeft duration-450");
+  $("section").toggleClass("popOutLeft duration-250");
   setTimeout(function () {
     $("section").removeClass("popOutLeft");
-  }, 500);
+  }, 300);
+  setTimeout(function () {
+    $("section").toggleClass("popInRight duration-250");
+  }, 340);
 }
 
 function changeItem_Right() {
-  $("section").addClass("popOutRight duration-450");
+  $("section").toggleClass("popOutRight duration-250");
   setTimeout(function () {
     $("section").removeClass("popOutRight");
-  }, 500);
+  }, 300);
+  setTimeout(function () {
+    $("section").toggleClass("popInLeft duration-250");
+  }, 340);
 }
 
 function changeItem_Star() {
