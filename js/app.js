@@ -513,6 +513,10 @@ new Vue({
       switch (this.cards[0].Tswirl) {
         case 1:
           this.swirl = true;
+            this.none = false;
+            this.ButtonsLeft = false;
+            this.ButtonsRight = false;
+            this.Next = false;
           break;
       }
       switch (this.cards[0].img_main) {

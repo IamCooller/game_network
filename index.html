@@ -124,7 +124,7 @@
 
 
 
-            <div class="event_card" v-else-if='!report'>
+            <div class="event_card" v-else-if='!report' v-show="!swirl">
                 <div class="income row">
                     <div class="income_left col-md-6">
                         <p class="income_text">ЕЖЕМЕСЯЧНО:</p>
@@ -184,14 +184,15 @@
                     <img src="img/Да.png" alt="" class="btn_right">
                 </v-touch>
             </div>
-        </section>
-
-        <section class="result_class" v-show="swirl">
-            <div class="result" style="margin-top: 60%;">
-                <p><span>Вы - прирожденный лидер.</span> Мы подготовили для вас результаты игры</p>
-                <a href="#" onclick="loader()"><img src="img/КНОПКА_result.png" alt=""></a>
+            <div class="result_class" v-show="swirl">
+                <div class="result" style="margin-top: 60%;">
+                    <p><span>Вы - прирожденный лидер.</span> Мы подготовили для вас результаты игры</p>
+                    <a href="#" onclick="loader()"><img src="img/КНОПКА_result.png" alt=""></a>
+                </div>
             </div>
         </section>
+
+
         <section class="loader" style="display: none;">
             <div class="cssload-dots">
                 <div class="cssload-dot"></div>
@@ -263,17 +264,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <p>Вместе со своей командой мы создали единственный в мире симулятор жизни сетевика. Чтобы вы могли
+                    <p style="
+    position: relative;
+    top: -20px; font-size: 16px; margin: 0; line-height: 29px;">Вместе со своей командой мы создали единственный в мире
+                        симулятор жизни сетевика.
+                        Чтобы вы могли
                         без ущерба посмотреть какие решения приносят результат, а какие наоборот разрушают. В своем
                         Instagram я записала короткие видео с разбором ситуаций из игры.</p>
                 </div>
                 <div class="row">
-                    <h5>Посмотрите бесплатно в моем Instagram, делитесь своим мнением!</h5>
+                    <h5 style="margin: 0;font-size: 19px;">Посмотрите бесплатно в моем Instagram, делитесь своим
+                        мнением!</h5>
                     <a href="#"><img src="img/КНОПКА_video.png" alt=""></a>
                 </div>
                 <div class="row">
-                    <h5>Вы также можете пройти игру заново, за лучшие результаты мы дарим подарки!</h5>
-                    <a href="#"><img src="img/КНОПКА_again.png" alt=""></a>
+                    <h5 style="margin: 0;font-size: 19px;">Вы также можете пройти игру заново, за лучшие результаты мы
+                        дарим подарки!</h5>
+                    <a href="#" onclick='window.location.reload()'><img src="img/КНОПКА_again.png" alt=""></a>
                 </div>
             </div>
         </section>

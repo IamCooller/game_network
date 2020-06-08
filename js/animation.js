@@ -71,16 +71,6 @@ function changeItem_Left() {
   }, 340);
 }
 
-function changeItem_Right() {
-  $("section").toggleClass("popOutRight duration-250");
-  setTimeout(function () {
-    $("section").removeClass("popOutRight");
-  }, 300);
-  setTimeout(function () {
-    $("section").toggleClass("popInLeft duration-250");
-  }, 340);
-}
-
 function changeItem_Star() {
   $(".Start_Game").toggleClass("popOutLeft duration-250");
   setTimeout(function () {
@@ -90,6 +80,16 @@ function changeItem_Star() {
     $(".Start_Game-Two").css("display", "");
     $(".Start_Game-Two").toggleClass("popInRight duration-450");
   }, 300);
+}
+
+function changeItem_Right() {
+  $("section").toggleClass("popOutRight duration-250");
+  setTimeout(function () {
+    $("section").removeClass("popOutRight");
+  }, 300);
+  setTimeout(function () {
+    $("section").toggleClass("popInLeft duration-250");
+  }, 340);
 }
 
 function changeItem_Left_CardsTwo() {
@@ -105,37 +105,37 @@ function changeItem_Left_CardsTwo() {
 }
 
 function loader() {
-  $(".cards_one").css("display", "none");
-  $(".result_class").toggleClass("popOutLeft duration-450");
+  $(".cards_one").toggleClass("popOutLeft duration-250");
   setTimeout(function () {
-    $(".result_class").css("display", "none");
-  }, 249);
+    $(".cards_one").css("display", "none");
+  }, 400);
+  setTimeout(function () {
+    $(".loader").toggleClass("popInLeft duration-250");
+  }, 400);
   setTimeout(function () {
     $(".loader").css("display", "");
-    $(".loader").toggleClass("popInRight duration-450");
-  }, 300);
+  }, 400);
   setTimeout(function () {
     $(".loader").toggleClass("popOutLeft duration-250");
-    setTimeout(function () {
-      $(".loader").css("display", "none");
-    }, 249);
-    setTimeout(function () {
-      $(".end_game").css("display", "");
-      $(".end_game").toggleClass("popOutRight duration-450");
-    }, 300);
+  }, 4000);
+  setTimeout(function () {
+    $(".loader").css("display", "none");
+  }, 4250);
+  setTimeout(function () {
+    $(".end_game").css("display", "");
+    $(".end_game").toggleClass("popInRight duration-450");
   }, 4400);
 }
-
 function admin() {
   $(".end_game").toggleClass("popOutLeft duration-250");
   setTimeout(function () {
     $(".end_game").css("display", "none");
-  }, 249);
+  }, 400);
 
   setTimeout(function () {
     $(".admin").css("display", "");
     $(".admin").toggleClass("popInRight duration-450");
-  }, 300);
+  }, 410);
 }
 
 $(".cards_one").ready(function () {
