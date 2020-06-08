@@ -6,6 +6,7 @@ new Vue({
     report: false, // ТУТ СДЕЛАТЬ ПРОВЕРКУ НА ОТЧЕТ
     card_counter: 0, // ТУТ СЧИТАЕТСЯ КАУНТЕР
     mounthly: 0,
+    Tresult: 0,
     peoples: 0,
     balance: 20000,
     change: 0,
@@ -15,6 +16,12 @@ new Vue({
     none: false,
     percetange: 0,
     sob1: 0,
+    sign_img: true,
+    welcome_img: false,
+    done_img: false,
+    downloading_img: false,
+    searching_img: false,
+    coming_img: false,
     Next: true,
     count: 0,
     cards: [
@@ -22,14 +29,14 @@ new Vue({
         id: 1,
         condition:
           "Ваш друг предложил вам сходить на презентацию компании, пойдете?",
-
         Buttons: false,
       },
       {
         id: 2,
         condition:
-          "Сетевой бизнес - это когда ты строишь маленькую экономику на рельном товаре. Вы готовы стартануть прямо сейчас? ",
+          "Сетевой бизнес - это когда ты строишь маленькую экономику на рельном товаре.",
         Buttons: false,
+        sign_img: false,
         false: "Это действие стоит - 10000₽",
       },
       {
@@ -46,6 +53,8 @@ new Vue({
         id: 4,
         condition:
           "Теперь вы лучше понимаете то, чем занимаетесь. Вы стали убедительнее",
+        Tresult: 1,
+        img_main: 2,
         Buttons: false,
       },
       {
@@ -63,6 +72,8 @@ new Vue({
         LastAction: "+10000",
         change_peoples: 2,
         action_peoples: 1,
+        img_main: 1,
+        Tresult: 1,
       },
       {
         id: 7, //квартал
@@ -81,6 +92,8 @@ new Vue({
         Buttons: false,
         change_peoples: 3,
         action_peoples: 1,
+        img_main: 5,
+        Tresult: 1,
       },
       {
         id: 10,
@@ -94,6 +107,8 @@ new Vue({
         change: 3000,
         action: 0,
         Buttons: false,
+        img_main: 1,
+        Tresult: 1,
       },
       {
         id: 12, //квартал
@@ -111,6 +126,8 @@ new Vue({
         change_peoples: 4,
         action_peoples: 1,
         Buttons: false,
+        img_main: 1,
+        Tresult: 1,
       },
       {
         id: 15,
@@ -124,6 +141,8 @@ new Vue({
         change_peoples: 4,
         action_peoples: 1,
         Buttons: false,
+        img_main: 3,
+        Tresult: 1,
       },
       {
         id: 17,
@@ -135,10 +154,13 @@ new Vue({
         change: 1000,
         Buttons: false,
         action: 0,
-        done: "Ваши визитки стали дарить новым людям. +7 человек в структуру",
+        condition: "Ваши визитки стали дарить новым людям.",
+        done: "+7 человек в структуру",
         change_peoples: 7,
         action_peoples: 1,
         LastAction: -1000,
+        img_main: 1,
+        Tresult: 1,
       },
       {
         id: 19, //квартал
@@ -151,8 +173,10 @@ new Vue({
       },
       {
         id: 21,
-        done: "Вы отлично провели время и теперь в вас еще больше сил работать",
+        done: "Вы отлично провели время и теперь у вас еще больше сил работать",
         Buttons: false,
+        img_main: 1,
+        Tresult: 1,
       },
       //---------------------------------ЧАСТЬ 2--------------------------------
       {
@@ -165,6 +189,8 @@ new Vue({
         done: "+5 человек в струкруту",
         change_peoples: 5,
         action_peoples: 1,
+        img_main: 2,
+        Tresult: 1,
         Buttons: false,
       },
       {
@@ -177,6 +203,8 @@ new Vue({
         id_V2: 4,
         condition: "Вы смогли победить. Чем это обернется для вас?",
         Buttons: false,
+        img_main: 1,
+        Tresult: 1,
       },
       {
         id_V2: 5, //квартал
@@ -195,6 +223,8 @@ new Vue({
         action: 1,
         Buttons: false,
         LastAction: "+30000",
+        img_main: 4,
+        Tresult: 1,
       },
       {
         id_V2: 8,
@@ -208,6 +238,8 @@ new Vue({
         done: "+20 человек",
         change_peoples: 20,
         action_peoples: 1,
+        img_main: 5,
+        Tresult: 1,
         Buttons: false,
       },
       {
@@ -221,6 +253,8 @@ new Vue({
         done: "+5 человек в структуре",
         change_peoples: 5,
         action_peoples: 1,
+        img_main: 4,
+        Tresult: 1,
         Buttons: false,
       },
       {
@@ -238,6 +272,8 @@ new Vue({
         condition: "На мероприятии вы смогли найти новых людей в структуру",
         done: "+4 человека",
         change_peoples: 4,
+        img_main: 2,
+        Tresult: 1,
         action_peoples: 1,
         Buttons: false,
       },
@@ -251,6 +287,8 @@ new Vue({
         condition: "Вы отправили письмо с просьбой разобраться.",
         done: "Вам вернули аккаунт",
         Buttons: false,
+        img_main: 4,
+        Tresult: 1,
       },
       //------------------------------------ЧАСТЬ 3--------------------------
       {
@@ -267,6 +305,8 @@ new Vue({
         Buttons: false,
         LastAction: "+70000",
         sob1: 0,
+        img_main: 4,
+        Tresult: 1,
       },
       {
         id_V3: 3,
@@ -286,6 +326,8 @@ new Vue({
         action: 0,
         Buttons: false,
         LastAction: "-20000",
+        Tresult: 4,
+        img_main: 1,
         sob3: 0,
       },
       {
@@ -301,6 +343,8 @@ new Vue({
         change: 100000,
         action: 0,
         Buttons: false,
+        img_main: 5,
+        Tresult: 1,
         change_peoples: 40,
         action_peoples: 1,
         LastAction: "-100000",
@@ -315,6 +359,8 @@ new Vue({
         false: "-5000 рублей и -5% ежемесячного дохода на 1 месяц",
         change: 5000,
         percetange: 5,
+        img_main: 4,
+        Tresult: 1,
         action: 0,
         Buttons: false,
         LastAction: "-5000",
@@ -415,6 +461,7 @@ new Vue({
         default:
           this.balance += 0;
       }
+
       switch (this.cards[0].Buttons) {
         case false:
           this.none = true;
@@ -437,7 +484,43 @@ new Vue({
         default:
           this.peoples += 0;
       }
-
+      switch (this.cards[0].Tresult) {
+        case 1:
+          this.result = true;
+          break;
+        default:
+          this.result = false;
+          break;
+      }
+      switch (this.cards[0].img_main) {
+        case 1: //результат
+          this.sign_img = false;
+          this.welcome_img = true;
+          break;
+        case 2: //картинка для карточек связанных с изучением чего-то
+          this.done_img = true;
+          this.sign_img = false;
+          break;
+        case 3: //картинка для карточек связанных с обучением в компании
+          this.downloading_img = true;
+          this.sign_img = false;
+          break;
+        case 4:
+          this.searching_img = true;
+          this.sign_img = false;
+          break;
+        case 5:
+          this.coming_img = true;
+          this.sign_img = false;
+          break;
+        default:
+          this.sign_img = true;
+          this.welcome_img = false;
+          this.done_img = false;
+          this.downloading_img = false;
+          this.searching_img = false;
+          this.coming_img = false;
+      }
       console.log(this.cards[0].id_V3);
     },
     check_round_left: function () {

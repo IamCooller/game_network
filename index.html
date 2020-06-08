@@ -16,7 +16,6 @@
 
 
     <main id="app">
-
         <section class="Start_Game">
             <div class="game_network">
                 <div class="img_row row">
@@ -63,8 +62,7 @@
                 </div>
                 <div class="browse_tape_row row">
                     <div class="browse_tape col-md-12">
-                        <p>Проведите пальцем вправо или нажмите на зеленую кнопку, чтобы ответить <span
-                                class="tape_yes">ДА</span></p>
+                        <p>Ваше решение влияет на сюжет игры.</p>
                     </div>
                 </div>
 
@@ -85,7 +83,7 @@
 
             <div class="report" v-if='report'>
                 <!-- СЮДА ПОМЕСТИЛ ОТЧЕТ И ЧЕРЕЗ V-IF ДЕЛАЮ ПРОВЕРКУ, ЕСЛИ REPORT = TRUE, ТО ПОКАЗЫВАЮ ОТЧЕТ -->
-                <div class="cvartal_report_row row">
+                <div class="cvartal_report_row row" style="margin-bottom: 20%;">
                     <div class="cvartal_report col-md-12">
                         <h4>КВАРТАЛЬНЫЙ ОТЧЕТ:</h4>
                         <p class="invite_text green">+{{peoples}} человек в струкруту</p>
@@ -93,7 +91,7 @@
                         <p class="invite_text">{{mounthly}}₽ ежемесячный доход</p>
                     </div>
                 </div>
-                <div class="now_moments_row row">
+                <div class="now_moments_row row" style="margin-bottom: 20%;">
                     <div class="now_moments col-md-12">
                         <h4>На данный момент:</h4>
                         <div class="income row">
@@ -145,13 +143,21 @@
                     </div>
                     <div class="photo_sign row">
                         <div class="photo_sign_up col-md-12">
-                            <img src="img/pablo-sign-up 1.png" alt="">
+                            <img src="img/pablo-sign-up 1.png" alt="" width="100%" v-show="sign_img">
+                            <img src="img/pablo-welcome.png" alt="" width="100%" v-show="welcome_img">
+                            <img src="img/pablo-done.png" alt="" width="100%" v-show="done_img">
+                            <img src="img/pablo-downloading.png" alt="" width="100%" v-show="downloading_img">
+                            <img src="img/pablo-searching.png" alt="" width="100%" v-show="searching_img">
+                            <img src="img/pablo-coming-soon.png" alt="" width="100%" v-show="coming_img">
                         </div>
                     </div>
                     <div class="invite_row row">
                         <div class="invite col-md-12">
+                            <div class="resultat" v-show="result">
+                                <h1 style="padding: 0; margin: 0; font-weight: bold;">Результат:</h1>
+                            </div>
                             <p class="invite_text green">{{cards[0].done}}</p>
-                            <h4>{{cards[0].condition}}</h4>
+                            <h4 style="line-height: 27px;">{{cards[0].condition}}</h4>
                             <p class="invite_text">{{cards[0].false}}</p>
                         </div>
                     </div>
